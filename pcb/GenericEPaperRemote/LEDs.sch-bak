@@ -1,0 +1,559 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED:WS2812B D17
+U 1 1 5F751918
+P 1850 2150
+F 0 "D17" H 2000 2450 50  0000 L CNN
+F 1 "WS2812B" H 1950 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 1900 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1950 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 1850 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 1850 2150 50  0001 C CNN "MPN"
+	1    1850 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D18
+U 1 1 5F752453
+P 2450 2150
+F 0 "D18" H 2600 2450 50  0000 L CNN
+F 1 "WS2812B" H 2550 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 2500 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2550 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 2450 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 2450 2150 50  0001 C CNN "MPN"
+	1    2450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D19
+U 1 1 5F752E5E
+P 3050 2150
+F 0 "D19" H 3200 2450 50  0000 L CNN
+F 1 "WS2812B" H 3150 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 3100 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3150 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 3050 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 3050 2150 50  0001 C CNN "MPN"
+	1    3050 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D20
+U 1 1 5F7535F9
+P 3650 2150
+F 0 "D20" H 3800 2450 50  0000 L CNN
+F 1 "WS2812B" H 3750 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 3700 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3750 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 3650 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 3650 2150 50  0001 C CNN "MPN"
+	1    3650 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D21
+U 1 1 5F753DBB
+P 4250 2150
+F 0 "D21" H 4400 2450 50  0000 L CNN
+F 1 "WS2812B" H 4350 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 4300 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4350 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 4250 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 4250 2150 50  0001 C CNN "MPN"
+	1    4250 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D22
+U 1 1 5F7546DC
+P 4850 2150
+F 0 "D22" H 5000 2450 50  0000 L CNN
+F 1 "WS2812B" H 4950 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 4900 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4950 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 4850 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 4850 2150 50  0001 C CNN "MPN"
+	1    4850 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D23
+U 1 1 5F75515C
+P 5450 2150
+F 0 "D23" H 5600 2450 50  0000 L CNN
+F 1 "WS2812B" H 5550 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 5500 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5550 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 5450 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 5450 2150 50  0001 C CNN "MPN"
+	1    5450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D24
+U 1 1 5F75580D
+P 6050 2150
+F 0 "D24" H 6200 2450 50  0000 L CNN
+F 1 "WS2812B" H 6150 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 6100 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6150 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 6050 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 6050 2150 50  0001 C CNN "MPN"
+	1    6050 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D25
+U 1 1 5F755E97
+P 6650 2150
+F 0 "D25" H 6800 2450 50  0000 L CNN
+F 1 "WS2812B" H 6750 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 6700 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6750 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 6650 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 6650 2150 50  0001 C CNN "MPN"
+	1    6650 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D26
+U 1 1 5F756632
+P 7250 2150
+F 0 "D26" H 7400 2450 50  0000 L CNN
+F 1 "WS2812B" H 7350 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 7300 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7350 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 7250 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 7250 2150 50  0001 C CNN "MPN"
+	1    7250 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D27
+U 1 1 5F7572D4
+P 7850 2150
+F 0 "D27" H 8000 2450 50  0000 L CNN
+F 1 "WS2812B" H 7950 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 7900 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7950 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 7850 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 7850 2150 50  0001 C CNN "MPN"
+	1    7850 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D28
+U 1 1 5F757826
+P 8450 2150
+F 0 "D28" H 8600 2450 50  0000 L CNN
+F 1 "WS2812B" H 8550 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 8500 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8550 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 8450 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 8450 2150 50  0001 C CNN "MPN"
+	1    8450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:WS2812B D29
+U 1 1 5F758231
+P 9050 2150
+F 0 "D29" H 9200 2450 50  0000 L CNN
+F 1 "WS2812B" H 9150 1900 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 9100 1850 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9150 1775 50  0001 L TNN
+F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 9050 2150 50  0001 C CNN "LCSC Url"
+F 5 "WS2812B-B" H 9050 2150 50  0001 C CNN "MPN"
+	1    9050 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR032
+U 1 1 5F758EA8
+P 1350 1850
+F 0 "#PWR032" H 1350 1700 50  0001 C CNN
+F 1 "+5V" H 1365 2023 50  0000 C CNN
+F 2 "" H 1350 1850 50  0001 C CNN
+F 3 "" H 1350 1850 50  0001 C CNN
+	1    1350 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR033
+U 1 1 5F759A7C
+P 1350 2450
+F 0 "#PWR033" H 1350 2200 50  0001 C CNN
+F 1 "GND" H 1355 2277 50  0000 C CNN
+F 2 "" H 1350 2450 50  0001 C CNN
+F 3 "" H 1350 2450 50  0001 C CNN
+	1    1350 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1850 1850 1850
+Connection ~ 1850 1850
+Wire Wire Line
+	1850 1850 2450 1850
+Connection ~ 2450 1850
+Wire Wire Line
+	2450 1850 3050 1850
+Connection ~ 3050 1850
+Wire Wire Line
+	3050 1850 3650 1850
+Connection ~ 3650 1850
+Wire Wire Line
+	3650 1850 4250 1850
+Connection ~ 4250 1850
+Wire Wire Line
+	4250 1850 4850 1850
+Connection ~ 4850 1850
+Wire Wire Line
+	4850 1850 5450 1850
+Connection ~ 5450 1850
+Wire Wire Line
+	5450 1850 6050 1850
+Connection ~ 6050 1850
+Wire Wire Line
+	6050 1850 6650 1850
+Connection ~ 6650 1850
+Wire Wire Line
+	6650 1850 7250 1850
+Connection ~ 7250 1850
+Wire Wire Line
+	7250 1850 7850 1850
+Connection ~ 7850 1850
+Wire Wire Line
+	7850 1850 8450 1850
+Connection ~ 8450 1850
+Wire Wire Line
+	8450 1850 9050 1850
+Wire Wire Line
+	1350 2450 1850 2450
+Connection ~ 1850 2450
+Wire Wire Line
+	1850 2450 2450 2450
+Connection ~ 2450 2450
+Wire Wire Line
+	2450 2450 3050 2450
+Connection ~ 3050 2450
+Wire Wire Line
+	3050 2450 3650 2450
+Connection ~ 3650 2450
+Wire Wire Line
+	3650 2450 4250 2450
+Connection ~ 4250 2450
+Wire Wire Line
+	4250 2450 4850 2450
+Connection ~ 4850 2450
+Wire Wire Line
+	4850 2450 5450 2450
+Connection ~ 5450 2450
+Wire Wire Line
+	5450 2450 6050 2450
+Connection ~ 6050 2450
+Wire Wire Line
+	6050 2450 6650 2450
+Connection ~ 6650 2450
+Wire Wire Line
+	6650 2450 7250 2450
+Connection ~ 7250 2450
+Wire Wire Line
+	7250 2450 7850 2450
+Connection ~ 7850 2450
+Wire Wire Line
+	7850 2450 8450 2450
+Connection ~ 8450 2450
+Wire Wire Line
+	8450 2450 9050 2450
+Text HLabel 1300 2150 0    50   Input ~ 0
+ws2812B-DIN
+Wire Wire Line
+	1300 2150 1550 2150
+$Comp
+L power:+5V #PWR034
+U 1 1 5F75E26E
+P 1350 3050
+F 0 "#PWR034" H 1350 2900 50  0001 C CNN
+F 1 "+5V" H 1365 3223 50  0000 C CNN
+F 2 "" H 1350 3050 50  0001 C CNN
+F 3 "" H 1350 3050 50  0001 C CNN
+	1    1350 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR035
+U 1 1 5F75E625
+P 1350 3450
+F 0 "#PWR035" H 1350 3200 50  0001 C CNN
+F 1 "GND" H 1355 3277 50  0000 C CNN
+F 2 "" H 1350 3450 50  0001 C CNN
+F 3 "" H 1350 3450 50  0001 C CNN
+	1    1350 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5F75EC2B
+P 1550 3250
+F 0 "C9" H 1665 3296 50  0000 L CNN
+F 1 "100nF" H 1665 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1588 3100 50  0001 C CNN
+F 3 "~" H 1550 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 1550 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 1550 3250 50  0001 C CNN "MPN"
+	1    1550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 5F75F349
+P 1950 3250
+F 0 "C10" H 2065 3296 50  0000 L CNN
+F 1 "100nF" H 2065 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1988 3100 50  0001 C CNN
+F 3 "~" H 1950 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 1950 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 1950 3250 50  0001 C CNN "MPN"
+	1    1950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 5F75F812
+P 2350 3250
+F 0 "C11" H 2465 3296 50  0000 L CNN
+F 1 "100nF" H 2465 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2388 3100 50  0001 C CNN
+F 3 "~" H 2350 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 2350 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 2350 3250 50  0001 C CNN "MPN"
+	1    2350 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5F75FB54
+P 2800 3250
+F 0 "C12" H 2915 3296 50  0000 L CNN
+F 1 "100nF" H 2915 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2838 3100 50  0001 C CNN
+F 3 "~" H 2800 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 2800 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 2800 3250 50  0001 C CNN "MPN"
+	1    2800 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C13
+U 1 1 5F75FE51
+P 3200 3250
+F 0 "C13" H 3315 3296 50  0000 L CNN
+F 1 "100nF" H 3315 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3238 3100 50  0001 C CNN
+F 3 "~" H 3200 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 3200 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 3200 3250 50  0001 C CNN "MPN"
+	1    3200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 5F76017C
+P 3550 3250
+F 0 "C14" H 3665 3296 50  0000 L CNN
+F 1 "100nF" H 3665 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3588 3100 50  0001 C CNN
+F 3 "~" H 3550 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 3550 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 3550 3250 50  0001 C CNN "MPN"
+	1    3550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 5F760406
+P 3900 3250
+F 0 "C15" H 4015 3296 50  0000 L CNN
+F 1 "100nF" H 4015 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3938 3100 50  0001 C CNN
+F 3 "~" H 3900 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 3900 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 3900 3250 50  0001 C CNN "MPN"
+	1    3900 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C16
+U 1 1 5F7606BE
+P 4300 3250
+F 0 "C16" H 4415 3296 50  0000 L CNN
+F 1 "100nF" H 4415 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4338 3100 50  0001 C CNN
+F 3 "~" H 4300 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 4300 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 4300 3250 50  0001 C CNN "MPN"
+	1    4300 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C17
+U 1 1 5F760AB8
+P 4700 3250
+F 0 "C17" H 4815 3296 50  0000 L CNN
+F 1 "100nF" H 4815 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4738 3100 50  0001 C CNN
+F 3 "~" H 4700 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 4700 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 4700 3250 50  0001 C CNN "MPN"
+	1    4700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C18
+U 1 1 5F760EE0
+P 5100 3250
+F 0 "C18" H 5215 3296 50  0000 L CNN
+F 1 "100nF" H 5215 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5138 3100 50  0001 C CNN
+F 3 "~" H 5100 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 5100 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 5100 3250 50  0001 C CNN "MPN"
+	1    5100 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C19
+U 1 1 5F76127E
+P 5550 3250
+F 0 "C19" H 5665 3296 50  0000 L CNN
+F 1 "100nF" H 5665 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5588 3100 50  0001 C CNN
+F 3 "~" H 5550 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 5550 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 5550 3250 50  0001 C CNN "MPN"
+	1    5550 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C20
+U 1 1 5F7615D7
+P 5950 3250
+F 0 "C20" H 6065 3296 50  0000 L CNN
+F 1 "100nF" H 6065 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5988 3100 50  0001 C CNN
+F 3 "~" H 5950 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 5950 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 5950 3250 50  0001 C CNN "MPN"
+	1    5950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C21
+U 1 1 5F761A16
+P 6350 3250
+F 0 "C21" H 6465 3296 50  0000 L CNN
+F 1 "100nF" H 6465 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6388 3100 50  0001 C CNN
+F 3 "~" H 6350 3250 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL21F104ZBCNNNC_100nF-104-80-20-50V_C1760.html" H 6350 3250 50  0001 C CNN "LCSC Url"
+F 5 "CL21F104ZBCNNNC" H 6350 3250 50  0001 C CNN "MPN"
+	1    6350 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3100 5950 3100
+Wire Wire Line
+	1350 3100 1350 3050
+Connection ~ 1550 3100
+Wire Wire Line
+	1550 3100 1350 3100
+Connection ~ 1950 3100
+Wire Wire Line
+	1950 3100 1550 3100
+Connection ~ 2350 3100
+Wire Wire Line
+	2350 3100 1950 3100
+Connection ~ 2800 3100
+Wire Wire Line
+	2800 3100 2350 3100
+Connection ~ 3200 3100
+Wire Wire Line
+	3200 3100 2800 3100
+Connection ~ 3550 3100
+Wire Wire Line
+	3550 3100 3200 3100
+Connection ~ 3900 3100
+Wire Wire Line
+	3900 3100 3550 3100
+Connection ~ 4300 3100
+Wire Wire Line
+	4300 3100 3900 3100
+Connection ~ 4700 3100
+Wire Wire Line
+	4700 3100 4300 3100
+Connection ~ 5100 3100
+Wire Wire Line
+	5100 3100 4700 3100
+Connection ~ 5550 3100
+Wire Wire Line
+	5550 3100 5100 3100
+Connection ~ 5950 3100
+Wire Wire Line
+	5950 3100 5550 3100
+Wire Wire Line
+	6350 3400 5950 3400
+Wire Wire Line
+	1350 3400 1350 3450
+Connection ~ 1550 3400
+Wire Wire Line
+	1550 3400 1350 3400
+Connection ~ 1950 3400
+Wire Wire Line
+	1950 3400 1550 3400
+Connection ~ 2350 3400
+Wire Wire Line
+	2350 3400 1950 3400
+Connection ~ 2800 3400
+Wire Wire Line
+	2800 3400 2350 3400
+Connection ~ 3200 3400
+Wire Wire Line
+	3200 3400 2800 3400
+Connection ~ 3550 3400
+Wire Wire Line
+	3550 3400 3200 3400
+Connection ~ 3900 3400
+Wire Wire Line
+	3900 3400 3550 3400
+Connection ~ 4300 3400
+Wire Wire Line
+	4300 3400 3900 3400
+Connection ~ 4700 3400
+Wire Wire Line
+	4700 3400 4300 3400
+Connection ~ 5100 3400
+Wire Wire Line
+	5100 3400 4700 3400
+Connection ~ 5550 3400
+Wire Wire Line
+	5550 3400 5100 3400
+Connection ~ 5950 3400
+Wire Wire Line
+	5950 3400 5550 3400
+NoConn ~ 9350 2150
+$EndSCHEMATC
