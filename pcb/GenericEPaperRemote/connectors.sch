@@ -617,20 +617,6 @@ F 3 "~" H 9850 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP6
-U 1 1 5F6B303B
-P 2850 1600
-F 0 "TP6" H 2908 1672 50  0000 L CNN
-F 1 "TestPoint" H 2908 1627 50  0001 L CNN
-F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 3050 1600 50  0001 C CNN
-F 3 "~" H 3050 1600 50  0001 C CNN
-	1    2850 1600
-	1    0    0    -1  
-$EndComp
-Connection ~ 2850 1600
-Wire Wire Line
-	2850 1600 3800 1600
-$Comp
 L Connector:TestPoint TP5
 U 1 1 5F6B398A
 P 2500 2150
@@ -777,8 +763,6 @@ Wire Wire Line
 	2400 800  2400 1600
 Connection ~ 2400 1600
 Wire Wire Line
-	2400 1600 2850 1600
-Wire Wire Line
 	1350 3650 1350 3550
 Wire Wire Line
 	1350 3550 1550 3550
@@ -790,4 +774,17 @@ Wire Wire Line
 Connection ~ 1300 4450
 NoConn ~ 1300 4350
 NoConn ~ 1350 3450
+Wire Wire Line
+	2400 1600 3800 1600
+$Comp
+L GenericEPaperRemote-rescue:OSS-logo-Codingfragments_common LOGO1
+U 1 1 5FAE0DC1
+P 1150 7350
+F 0 "LOGO1" H 1428 7421 50  0000 L CNN
+F 1 "Codingfragments" H 1428 7330 50  0000 L CNN
+F 2 "codingfragment-components:OSSLogo" H 1150 7350 50  0001 C CNN
+F 3 "" H 1150 7350 50  0001 C CNN
+	1    1150 7350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

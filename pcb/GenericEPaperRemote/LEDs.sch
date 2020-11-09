@@ -21,7 +21,7 @@ F 0 "D17" H 2000 2450 50  0000 L CNN
 F 1 "WS2812B" H 1950 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 1900 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 1950 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 1850 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 1850 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 1850 2150 50  0001 C CNN "MPN"
 	1    1850 2150
 	1    0    0    -1  
@@ -34,7 +34,7 @@ F 0 "D18" H 2600 2450 50  0000 L CNN
 F 1 "WS2812B" H 2550 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 2500 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 2550 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 2450 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 2450 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 2450 2150 50  0001 C CNN "MPN"
 	1    2450 2150
 	1    0    0    -1  
@@ -47,7 +47,7 @@ F 0 "D19" H 3200 2450 50  0000 L CNN
 F 1 "WS2812B" H 3150 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 3100 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3150 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 3050 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 3050 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 3050 2150 50  0001 C CNN "MPN"
 	1    3050 2150
 	1    0    0    -1  
@@ -60,7 +60,7 @@ F 0 "D20" H 3800 2450 50  0000 L CNN
 F 1 "WS2812B" H 3750 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 3700 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 3750 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 3650 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 3650 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 3650 2150 50  0001 C CNN "MPN"
 	1    3650 2150
 	1    0    0    -1  
@@ -73,7 +73,7 @@ F 0 "D21" H 4400 2450 50  0000 L CNN
 F 1 "WS2812B" H 4350 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 4300 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4350 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 4250 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 4250 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 4250 2150 50  0001 C CNN "MPN"
 	1    4250 2150
 	1    0    0    -1  
@@ -86,7 +86,7 @@ F 0 "D22" H 5000 2450 50  0000 L CNN
 F 1 "WS2812B" H 4950 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 4900 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 4950 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 4850 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 4850 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 4850 2150 50  0001 C CNN "MPN"
 	1    4850 2150
 	1    0    0    -1  
@@ -99,7 +99,7 @@ F 0 "D23" H 5600 2450 50  0000 L CNN
 F 1 "WS2812B" H 5550 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 5500 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 5550 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 5450 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 5450 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 5450 2150 50  0001 C CNN "MPN"
 	1    5450 2150
 	1    0    0    -1  
@@ -112,7 +112,7 @@ F 0 "D24" H 6200 2450 50  0000 L CNN
 F 1 "WS2812B" H 6150 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 6100 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6150 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 6050 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 6050 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 6050 2150 50  0001 C CNN "MPN"
 	1    6050 2150
 	1    0    0    -1  
@@ -125,7 +125,7 @@ F 0 "D25" H 6800 2450 50  0000 L CNN
 F 1 "WS2812B" H 6750 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 6700 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 6750 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 6650 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 6650 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 6650 2150 50  0001 C CNN "MPN"
 	1    6650 2150
 	1    0    0    -1  
@@ -138,7 +138,7 @@ F 0 "D26" H 7400 2450 50  0000 L CNN
 F 1 "WS2812B" H 7350 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 7300 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7350 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 7250 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 7250 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 7250 2150 50  0001 C CNN "MPN"
 	1    7250 2150
 	1    0    0    -1  
@@ -151,7 +151,7 @@ F 0 "D27" H 8000 2450 50  0000 L CNN
 F 1 "WS2812B" H 7950 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 7900 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 7950 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 7850 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 7850 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 7850 2150 50  0001 C CNN "MPN"
 	1    7850 2150
 	1    0    0    -1  
@@ -164,7 +164,7 @@ F 0 "D28" H 8600 2450 50  0000 L CNN
 F 1 "WS2812B" H 8550 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 8500 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 8550 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 8450 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 8450 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 8450 2150 50  0001 C CNN "MPN"
 	1    8450 2150
 	1    0    0    -1  
@@ -177,7 +177,7 @@ F 0 "D29" H 9200 2450 50  0000 L CNN
 F 1 "WS2812B" H 9150 1900 50  0000 L CNN
 F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 9100 1850 50  0001 L TNN
 F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9150 1775 50  0001 L TNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_JST-Sales-America-S8B-PH-SM4-TB-LF-SN_C265121.html" H 9050 2150 50  0001 C CNN "LCSC Url"
+F 4 "https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_5050-RGBIntegrated-Light-4Pin_C114586.html" H 9050 2150 50  0001 C CNN "LCSC Url"
 F 5 "WS2812B-B" H 9050 2150 50  0001 C CNN "MPN"
 	1    9050 2150
 	1    0    0    -1  

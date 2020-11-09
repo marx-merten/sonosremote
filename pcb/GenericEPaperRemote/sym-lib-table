@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name PrivateElements)(type Legacy)(uri ${KIPRJMOD}/PrivateElements.lib)(options "")(descr ""))
   (lib (name ProjectParts)(type Legacy)(uri ${KIPRJMOD}/ProjectParts.lib)(options "")(descr ""))
+  (lib (name GenericEPaperRemote-rescue)(type Legacy)(uri ${KIPRJMOD}/GenericEPaperRemote-rescue.lib)(options "")(descr ""))
 )

@@ -514,14 +514,13 @@ Text Notes 4400 1900 3    50   ~ 0
 FLASH
 Text Label 5900 2400 0    50   ~ 0
 disp_din
-NoConn ~ 5900 2700
 Text Label 5900 2800 0    50   ~ 0
 disp_clk
 Text Label 4500 2800 2    50   ~ 0
 disp_cs
 Text Label 4500 2700 2    50   ~ 0
 disp_busy
-Text Label 3550 2500 2    50   ~ 0
+Text Label 5900 2700 0    50   ~ 0
 io_rot_a
 Text Label 5900 2500 0    50   ~ 0
 disp_dc
@@ -597,20 +596,18 @@ $EndComp
 $Comp
 L power:GND #PWR05
 U 1 1 5F67803A
-P 6250 6750
-F 0 "#PWR05" H 6250 6500 50  0001 C CNN
-F 1 "GND" H 6255 6577 50  0000 C CNN
-F 2 "" H 6250 6750 50  0001 C CNN
-F 3 "" H 6250 6750 50  0001 C CNN
-	1    6250 6750
+P 6250 6850
+F 0 "#PWR05" H 6250 6600 50  0001 C CNN
+F 1 "GND" H 6255 6677 50  0000 C CNN
+F 2 "" H 6250 6850 50  0001 C CNN
+F 3 "" H 6250 6850 50  0001 C CNN
+	1    6250 6850
 	-1   0    0    -1  
 $EndComp
-Text Label 6150 6450 3    50   ~ 0
+Text Label 6050 6450 2    50   ~ 0
 io_rot_b
-Text Label 6350 6450 3    50   ~ 0
+Text Label 6450 6450 0    50   ~ 0
 io_rot_a
-Wire Wire Line
-	6250 6450 6250 6750
 $Comp
 L Codingfragments_switches:TactileSwitchSMD6x6 SW1
 U 1 1 5F67EB8A
@@ -1233,7 +1230,7 @@ $Comp
 L Connector:Conn_01x02_Male SW14
 U 1 1 5F94C13A
 P 6150 7350
-F 0 "SW14" V 6400 7350 50  0000 R CNN
+F 0 "SW14" V 6250 7200 50  0000 R CNN
 F 1 "Conn_01x02_Male" V 6100 7600 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6150 7350 50  0001 C CNN
 F 3 "~" H 6150 7350 50  0001 C CNN
@@ -1263,11 +1260,11 @@ Wire Wire Line
 Wire Wire Line
 	5800 7150 5800 7050
 Wire Wire Line
-	6450 5850 6750 5850
+	6450 5850 6800 5850
 Wire Wire Line
-	6750 5850 6750 7150
+	6800 5850 6800 7150
 Wire Wire Line
-	6750 7150 6250 7150
+	6800 7150 6250 7150
 Connection ~ 6450 5850
 $Comp
 L Connector:TestPoint TP9
@@ -1325,4 +1322,46 @@ $EndComp
 Connection ~ 6450 4450
 Wire Wire Line
 	6450 4450 6450 4700
+$Comp
+L Device:R R14
+U 1 1 5FA8EF1B
+P 6050 6600
+F 0 "R14" H 5850 6650 50  0000 L CNN
+F 1 "10K" H 5850 6550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5980 6600 50  0001 C CNN
+F 3 "~" H 6050 6600 50  0001 C CNN
+	1    6050 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 6450 6050 6450
+$Comp
+L Device:R R15
+U 1 1 5FA94F2B
+P 6450 6600
+F 0 "R15" H 6520 6646 50  0000 L CNN
+F 1 "10K" H 6520 6555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6380 6600 50  0001 C CNN
+F 3 "~" H 6450 6600 50  0001 C CNN
+	1    6450 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 6450 6450 6450
+$Comp
+L power:+3.3V #PWR036
+U 1 1 5FA9A3EE
+P 6050 6750
+F 0 "#PWR036" H 6050 6600 50  0001 C CNN
+F 1 "+3.3V" H 6065 6923 50  0000 C CNN
+F 2 "" H 6050 6750 50  0001 C CNN
+F 3 "" H 6050 6750 50  0001 C CNN
+	1    6050 6750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6250 6450 6250 6850
+Wire Wire Line
+	6450 6750 6050 6750
+Connection ~ 6050 6750
 $EndSCHEMATC
