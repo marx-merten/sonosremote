@@ -25,6 +25,10 @@ class WindowCanvas (DrawRoutines):
             return
         self.display.pixel(x+self.translate_x, y+self.translate_y, color)
 
+    # Stupid implementation, if needed need to be overwritten with a more perfomend version
+    def clear(self, color=0):
+        self.display.fill_rect(0, 0, self.width-1, self.height-1, color)
+
 
 class BufferedCanvas (DrawRoutines):
     def __init__(self, width, height, rotation=ROTATE_0):
