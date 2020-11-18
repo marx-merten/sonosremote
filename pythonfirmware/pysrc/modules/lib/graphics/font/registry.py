@@ -72,7 +72,7 @@ class Glyph:
 
 
 class FontInfo:
-    def __init__(self, font):
+    def __init__(self, name: string, font):
         self.glyphCount = font[0]
         self.bbxMode = font[1]
         self.bitsPer0 = font[2]
@@ -94,6 +94,7 @@ class FontInfo:
         self.startLowerA = read_word_from_bytes(font, 19)
         self.startUnicode = read_word_from_bytes(font, 21)
         self.font = font
+        self.name = name
 
     def search_glyph(self, char):
         code = ord(char)
@@ -147,7 +148,7 @@ class FontRegistry:
         self.fonts = {}
 
     def register_font(self, name: string, font_buffer: bytes):
-        fi = FontInfo(font_buffer)
+        fi = FontInfo(name, font_buffer)
         self.fonts[name] = fi
 
     def get(self, name: string):
