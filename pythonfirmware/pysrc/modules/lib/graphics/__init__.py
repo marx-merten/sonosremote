@@ -2,32 +2,7 @@ import framebuf
 # from lib.fonts import FontInfo, FontGlyphDecoder
 from lib.utils import timed_function
 from .routines import DrawRoutines
-BLACK = 0
-WHITE = 1
-
-ROTATE_0 = 0
-ROTATE_90 = 1
-ROTATE_180 = 2
-ROTATE_270 = 3
-
-
-class WindowCanvas (DrawRoutines):
-    def __init__(self, display: DrawRoutines, x, y, w, h):
-        self.display = display
-        self.translate_x = x
-        self.translate_y = y
-        self.width = w
-        self.height = h
-        self.error_msg = False
-
-    def pixel(self, x, y, color):
-        if (x >= self.width or y >= self.height):
-            return
-        self.display.pixel(x+self.translate_x, y+self.translate_y, color)
-
-    # Stupid implementation, if needed need to be overwritten with a more perfomend version
-    def clear(self, color=0):
-        self.display.fill_rect(0, 0, self.width-1, self.height-1, color)
+from .const import *
 
 
 class BufferedCanvas (DrawRoutines):
@@ -103,6 +78,3 @@ class BufferedCanvas (DrawRoutines):
 
     def buffer_pixel(self, x, y, color):
         self.framebuffer.pixel(int(x), int(y), color)
-
-    def get_window(self, x, y, w, h):
-        return WindowCanvas(self, x, y, w, h)

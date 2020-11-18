@@ -2,7 +2,7 @@ import lib.epaper2in9 as epaper
 import globals.pinout as pinout
 from machine import SPI, Pin
 import lib.graphics as graphics
-
+from lib.utils import timed_function
 
 EPD_WIDTH = 128
 EPD_HEIGHT = 296
@@ -20,6 +20,7 @@ class EPDDisplay:
         self.canvas.clear(color)
         self.update_screen()
 
+    @timed_function
     def update_screen(self, partial=False):
         self.wake()
         if partial:

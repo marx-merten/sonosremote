@@ -1,6 +1,8 @@
 import framebuf
 # from lib.fonts import FontInfo, FontGlyphDecoder
 from lib.utils import timed_function
+from .font import FontInfo
+from .const import *
 
 
 class DrawRoutines:
@@ -124,59 +126,64 @@ class DrawRoutines:
                 break
         return self
 
-    # def set_font(self, font):
-    #     self.font = FontInfo(font)
-    #     return self
+    def get_window(self, x, y, w, h):
+        return WindowCanvas(self, x, y, w, h)
 
-    # def get_text_boundingbox(self, text, x, y):
-    #     max_x = 0
-    #     max_y = 0
-    #     min_y = 0
-    #     for c in text:
-    #         gcode = self.font.search_glyph(c)
-    #         if (gcode != None):
-    #             glyph = FontGlyphDecoder(self.font, gcode).decodeHeader()
-    #             lower_y = glyph.targetY-glyph.glyphHeight
-    #             if min_y > lower_y:
-    #                 min_y = lower_y
-    #             if max_y < glyph.targetY:
-    #                 max_y = glyph.targetY
-    #             max_x += glyph.targetX+glyph.glyphWidth
-    #         else:
-    #             min_y = self.font.descentG
-    #             max_y = self.font.ascentA
-    #             max_x += self.font.maxCharWidth
-    #     return (x, y-max_y, x+max_x, y-min_y)
+    def set_font(self, font: FontInfo):
+        self.current_font = font
 
-    # @timed_function
-    # def draw_text(self, text, x, y, color=0, bgColor=1, transparent=False, kerning=0):
-    #     print(len(self.rawBuffer))
-    #     (x0, y0, x1, y1) = self.get_text_boundingbox(text, x, y)
-    #     if not transparent:
-    #         self.fill_rect(x0, y0, x1, y1, bgColor)
+    @timed_function
+    def get_bounding_box(self, txt: string, x, y, kerning=0):
+        upper = y
+        lower = y
+        right = x
+        for c in txt:
+            glyph = self.current_font.get_glyph(c)
+            if glyph:
+                upper = min(upper, y-glyph.upper_left_y)
+                lower = max(lower, y-glyph.offset_y)
+                right += glyph.width+glyph.upper_left_x
+            else:
+                glyph = self.current_font.get_glyph('A')
+                if glyph:
+                    upper = min(upper, y-glyph.upper_left_y)
+                    lower = max(lower, y-glyph.offset_y)
+                    right += glyph.width+glyph.upper_left_x
+                else:
+                    upper = min(upper, y-self.current_font.ascentA)
+                    lower = max(lower, y-self.current_font.descentG)
+                    right += self.current_font.maxCharWidth
+        return((x, upper), (right, lower))
 
-    #     # Set Start pos
-    #     char_x = x
-    #     char_y = y
-    #     print(len(self.rawBuffer))
+    @timed_function
+    def draw_string(self, txt: string, x, y, inverse=False, kerning=0, transparent=False):
+        ((x0, y0), (x1, y1)) = self.get_bounding_box(txt, x, y, kerning)
+        if not transparent:
+            self.fill_rect(x0, y0, x1, y1, BLACK if inverse else WHITE)
+        str_x = x
+        for c in txt:
+            glyph = self.current_font.get_glyph(c)
+            if glyph:
+                dc = self.get_window(
+                    str_x, y-glyph.upper_left_y, glyph.width, glyph.height)
+                glyph.materialize(dc)
+                str_x += glyph.width+glyph.upper_left_x
 
-    #     for c in text:
-    #         glyph = self.font.get_glyph(c)
-    #         print(c)
-    #         print(len(self.rawBuffer))
 
-    #         # gcode = self.font.search_glyph(c)
+class WindowCanvas (DrawRoutines):
+    def __init__(self, display: DrawRoutines, x, y, w, h):
+        self.display = display
+        self.translate_x = x
+        self.translate_y = y
+        self.width = w
+        self.height = h
+        self.error_msg = False
 
-    #         # if (gcode != None):
-    #         if glyph:
-    #             print(len(self.rawBuffer))
-    #             glyph.draw(char_x, char_y, self, color, bgColor)
-    #             print(len(self.rawBuffer))
+    def pixel(self, x, y, color):
+        if (x >= self.width or y >= self.height):
+            return
+        self.display.pixel(x+self.translate_x, y+self.translate_y, color)
 
-    #             # advance to next char
-    #             char_x = glyph.targetX+glyph.glyphWidth+kerning
-    #         else:
-    #             (x0, y0, x1, y1) = self.get_text_boundingbox('A', char_x, char_y)
-    #             self.draw_rect(x0, y0, x1, y1, color)
-    #             char_x = x1+kerning
-    #     return self
+    # Stupid implementation, if needed need to be overwritten with a more perfomend version
+    def clear(self, color=0):
+        self.display.fill_rect(0, 0, self.width-1, self.height-1, color)

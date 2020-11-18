@@ -1,4 +1,4 @@
-import time
+import time as utime
 
 
 def convertUint8ToInt8(v, size=8):
