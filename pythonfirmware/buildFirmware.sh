@@ -7,7 +7,9 @@ export ESPIDF=/Users/stefan/projekteHome/marxworld/electronics/environments/esp3
 . /Users/stefan/projekteHome/marxworld/electronics/environments/esp32/espidf3/export.sh
 export BOARD=GENERIC_SPIRAM
 export FLASH_SIZE=16MB
-export PORT=/dev/tty.usbserial-AD0KDXKX
+export PORT=$(ls -1 /dev/tty.usbserial-*|head -n1)
+
+# export PORT=/dev/tty.usbserial-AD0KDXKW
 export PART_SRC=${curdir}/partitions-remote-py.csv
 export FROZEN_MANIFEST=${curdir}/frozenmanifest.py
 export PROJECT_DIR=$curdir
