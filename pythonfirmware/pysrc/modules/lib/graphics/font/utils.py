@@ -1,4 +1,7 @@
 
+from lib.utils import timed_function, traced_function
+
+
 def convertUint8ToInt8(v, size=8):
     """ Convert variable length uint blocks to int, defaults to 8 bit blocks/bytes
     """
@@ -16,15 +19,15 @@ def read_word_from_bytes(bytes, pos):
 
 
 class BitstreamReader:
-    def __init__(self, data: bytes, offset=0):
+    def __init__(self, data, offset: uint = 0):
         self.data = data
         self.move_to(offset)
 
-    def move_to(self, offset):
+    def move_to(self, offset: uint):
         self.bytePos = offset//8
         self.bitPos = offset % 8
 
-    def read_unsigned_bits(self, cnt):
+    def read_unsigned_bits(self, cnt: uint) -> uint:
         bpos = self.bitPos
         pos = self.bytePos
 

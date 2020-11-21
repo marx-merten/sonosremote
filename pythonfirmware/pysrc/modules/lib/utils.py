@@ -1,4 +1,5 @@
 import time as utime
+import gc
 
 
 def convertUint8ToInt8(v, size=8):
@@ -10,13 +11,85 @@ def convertUint8ToInt8(v, size=8):
         return v
 
 
+__stats = {}
+cnt = 0
+
+
+def stats_function(f, *args, **kwargs):
+
+    def new_func(*args, **kwargs):
+        clear_stats()
+        result = f(*args, **kwargs)
+        dump_stats()
+        return result
+    return new_func
+
+
+def profiled_function(f, *args, **kwargs):
+
+    def new_func(*args, **kwargs):
+        gc.collect()
+        mem1 = gc.mem_free()
+
+        result = f(*args, **kwargs)
+
+        gc.collect()
+        mem2 = gc.mem_free()
+        print("--> Memory took {:n} Bytes --> total Memory Free({:n}B {:.2f}kB)".format(
+            mem1-mem2, mem2, mem2/1024))
+        return result
+    return new_func
+
+
 def timed_function(f, *args, **kwargs):
     myname = str(f).split(' ')[1]
 
     def new_func(*args, **kwargs):
         t = utime.ticks_us()
+        global cnt, __stats
+        cnt += 1
         result = f(*args, **kwargs)
         delta = utime.ticks_diff(utime.ticks_us(), t)
-        print('Function {} Time = {:6.3f}ms'.format(myname, delta/1000))
+        print('{}: Function {} Time = {:6.3f}ms'.format(cnt, myname, delta/1000))
+        if myname in __stats.keys():
+            (c, t) = __stats[myname]
+            __stats[myname] = (c+1, t+(delta/1000))
+        else:
+            __stats[myname] = (1, delta/1000)
         return result
     return new_func
+
+
+def traced_function(f, *args, **kwargs):
+    myname = str(f).split(' ')[1]
+
+    def new_func(*args, **kwargs):
+        t = utime.ticks_us()
+        global cnt, __stats
+        cnt += 1
+        result = f(*args, **kwargs)
+        delta = utime.ticks_diff(utime.ticks_us(), t)
+        if myname in __stats.keys():
+            (c, t) = __stats[myname]
+            __stats[myname] = (c+1, t+(delta/1000))
+        else:
+            __stats[myname] = (1, delta/1000)
+        return result
+    return new_func
+
+
+def clear_stats():
+    global __stats, cnt
+    __stats = {}
+    cnt = 0
+
+
+def dump_stats():
+    global __stats, cnt
+
+    print("Stats !!")
+    print("------------")
+    stats = {}
+    for (k, v) in __stats.items():
+        (c, t) = v
+        print("{:20s} : {:8.2f}ms ({} calls) {:.2f} ms/call".format(k, t, c, t/c))

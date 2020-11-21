@@ -1,18 +1,21 @@
 
 from .utils import *
-from lib.utils import timed_function
+from lib.utils import timed_function, traced_function
+import micropython
 
 from ... import graphics
 
 
 class Glyph:
-    def __init__(self, fi: FontInfo, startpos: int):
+    def __init__(self, fi: FontInfo, startpos: int, code: int):
         self.font = fi
         self.glyphPos = startpos
         # Offset is in bits
+        self.code = code
         self.reader = BitstreamReader(fi.font, startpos*8)
         self.decode_header()
 
+    @traced_function
     def decode_header(self):
         self.width = self.reader.read_unsigned_bits(
             self.font.bitsPerCharWidth)
@@ -28,13 +31,14 @@ class Glyph:
         self.delta_x = d
         return self
 
+#    @traced_function
     def encodeBitL(self, v, canvas, len, tracker):
         while len > 0:
             canvas.pixel(tracker.x, tracker.y, v)
             len -= 1
             tracker.step()
 
-    @timed_function
+    @traced_function
     def materialize(self, canvas: graphics.DrawRoutines, transparent=False):
         # need to repositioning, could do a direct offset but this would be additional cost to maintain.
         # reading some header bits is reasonable fast, so no problem here
@@ -61,8 +65,15 @@ class Glyph:
             b = rle.read_unsigned_bits(self.font.bitsPer1)
             while True:
                 # skip 0
-                self.encodeBitL(1, canvas, a, tracker)
-                self.encodeBitL(0, canvas, b, tracker)
+                len = a
+                while len > 0:
+                    len -= 1
+                    tracker.step()
+                len = b
+                while len > 0:
+                    canvas.pixel(tracker.x, tracker.y, 0)
+                    len -= 1
+                    tracker.step()
 
                 if rle.read_unsigned_bits(1) == 0:
                     break
@@ -107,7 +118,6 @@ class FontInfo:
             while True:
                 if self.font[pos+1] == 0:
                     break
-#                print(chr(self.font[pos]))
                 if self.font[pos] == code:
                     return pos+2  # skip glyph size and actual code, return offset to glyph
                 pos += self.font[pos+1]  # advanced glyph size
@@ -117,7 +127,6 @@ class FontInfo:
             while True:
                 pos += read_word_from_bytes(self.font, unicodeTable)
                 lastEncoding = read_word_from_bytes(self.font, unicodeTable+2)
-#                print("last encoding: {:x}".format(lastEncoding))
                 unicodeTable += 4
                 if (lastEncoding >= code):
                     break
@@ -125,7 +134,6 @@ class FontInfo:
                 if pos+1 >= len(self.font):
                     break  # reached the end, no filler
                 currentEncoding = read_word_from_bytes(self.font, pos)
-#                print("- encoding: {:x}".format(currentEncoding))
                 if (code == currentEncoding):
                     return pos+3
                 else:
@@ -140,7 +148,7 @@ class FontInfo:
         if code == None:
             return None
         else:
-            return Glyph(self, code)
+            return Glyph(self, code, ord(c))
 
 
 class FontRegistry:
