@@ -2,6 +2,7 @@
     "python.autoComplete.extraPaths": [
         "./pysrc/modules",
         "./pysrc/live",
+        "./pysrc/firmware",
          "stubs/cpython_patch",
          "stubs/mpy_1_13-nightly_frozen/esp32/GENERIC",
          "stubs/esp32_1_13_0-103",
@@ -9,6 +10,7 @@
     "python.autoComplete.typeshedPaths": [
         "./pysrc/modules",
         "./pysrc/live",
+        "./pysrc/firmware",
          "stubs/cpython_patch",
          "stubs/mpy_1_13-nightly_frozen/esp32/GENERIC",
          "stubs/esp32_1_13_0-103",
@@ -16,6 +18,7 @@
     "python.analysis.typeshedPaths": [
         "./pysrc/modules",
         "./pysrc/live",
+        "./pysrc/firmware",
          "stubs/cpython_patch",
          "stubs/mpy_1_13-nightly_frozen/esp32/GENERIC",
          "stubs/esp32_1_13_0-103",
@@ -24,6 +27,7 @@
         "./pysrc/modules",
         "./**",
         "./pysrc/live",
+        "./pysrc/firmware",
         "stubs/cpython_patch",
         "stubs/mpy_1_13-nightly_frozen/esp32/GENERIC",
         "stubs/esp32_1_13_0-103"
