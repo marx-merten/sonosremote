@@ -3,8 +3,8 @@ import fonts.basic
 from lib.graphics.debug import dump_buffer
 from lib.graphics import BufferedCanvas
 from lib.graphics.font import FontRegistry, FontInfo
-import lib.graphics.debug as gdebug
-import lib.graphics as graphics
+import graphics.debug as gdebug
+import graphics as graphics
 d = graphics.BufferedCanvas(25, 200)
 d.rotate(graphics.ROTATE_90)
 d.clear()

@@ -1,5 +1,5 @@
 
-from lib.utils import timed_function, traced_function
+from utils import timed_function, traced_function
 
 
 def convertUint8ToInt8(v, size=8):

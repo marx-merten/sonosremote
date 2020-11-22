@@ -1,8 +1,8 @@
-import lib.epaper2in9 as epaper
+import epaper2in9 as epaper
 import globals.pinout as pinout
 from machine import SPI, Pin
-import lib.graphics as graphics
-from lib.utils import timed_function, traced_function
+import graphics
+from utils import timed_function, traced_function
 
 EPD_WIDTH = 128
 EPD_HEIGHT = 296

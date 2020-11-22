@@ -1,5 +1,5 @@
-import lib.graphics.debug as gdebug
-import lib.graphics as graphics
+import graphics.debug as gdebug
+import graphics as graphics
 d = graphics.BufferedCanvas(25, 200)
 d.rotate(graphics.ROTATE_90)
 d.clear()

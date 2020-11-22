@@ -1,5 +1,6 @@
 import time as utime
 import gc
+import uasyncio
 
 
 def convertUint8ToInt8(v, size=8):
@@ -93,3 +94,17 @@ def dump_stats():
     for (k, v) in __stats.items():
         (c, t) = v
         print("{:20s} : {:8.2f}ms ({} calls) {:.2f} ms/call".format(k, t, c, t/c))
+
+
+def clean_memory(print_out=False):
+    mem1 = gc.mem_free()
+    gc.collect()
+    mem2 = gc.mem_free()
+    if print_out:
+        print("--> Memory freed {:n} Bytes --> total Memory Free({:n}B {:.2f}kB)".format(mem2-mem1, mem2, mem2/1024))
+
+
+async def create_repeat_task(f, delay_ms, *args, **kwargs):
+    while True:
+        f(*args, **kwargs)
+        await uasyncio.sleep_ms(delay_ms)

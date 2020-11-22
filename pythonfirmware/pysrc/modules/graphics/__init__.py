@@ -1,6 +1,6 @@
 import framebuf
 # from lib.fonts import FontInfo, FontGlyphDecoder
-from lib.utils import timed_function, traced_function
+from utils import timed_function, traced_function
 from .const import *
 
 

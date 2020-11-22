@@ -4,7 +4,7 @@ from lib.graphics.debug import dump_buffer
 from lib.graphics import BufferedCanvas, FontCache
 from lib.graphics.font import FontRegistry, FontInfo
 import epd
-import lib.graphics as graphics
+import graphics as graphics
 from lib.utils import clear_stats, dump_stats, timed_function, profiled_function, stats_function
 from lib.graphics.const import *
 

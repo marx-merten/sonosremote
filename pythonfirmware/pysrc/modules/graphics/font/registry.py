@@ -1,9 +1,9 @@
 
 from .utils import *
-from lib.utils import timed_function, traced_function
+from utils import timed_function, traced_function
 import micropython
 
-from ... import graphics
+import graphics
 
 
 class Glyph:
