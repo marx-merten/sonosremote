@@ -13,13 +13,14 @@ import uasyncio
 import logging
 
 logging.basicConfig(level=logging.DEBUG)
-logging.getLogger("Base").debug("Logging enabled")
-logging.basicConfig(level=logging.WARNING)
+LOG = logging.getLogger("Base")
+LOG.debug("Logging enabled")
+logging.basicConfig(level=logging.INFO)
 
-print("Initializing HAL")
+LOG.info("Initializing HAL")
 hal.init()
 
-print("register Fonts")
+LOG.info("register Fonts")
 hal.fonts.register_font("7seg", u8glib.u8g2_font_7Segments_26x42_mn)
 hal.fonts.register_font("small", fu.u8g2_font_fur11_tf)
 hal.fonts.register_font("normal", fu.u8g2_font_fur14_tf)
@@ -33,8 +34,8 @@ hal.fonts.register_font("meteo_huge", fontello.fontello_meteo_meteo_32)
 hal.fonts.register_font("icon", fontello.fontello_icons_icon_12)
 hal.fonts.register_font("icon", fontello.fontello_icons_icon_24)
 
-print("Start wifi")
+LOG.info("Start wifi")
 hal.init_wifi()
 
-print("Initializing HAL...done")
-clean_memory(True)
+LOG.info("Initializing HAL...done")
+clean_memory(LOG)
