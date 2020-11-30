@@ -1,6 +1,7 @@
 import time as utime
 import gc
 import uasyncio
+import sys
 
 
 def convertUint8ToInt8(v, size=8):
@@ -108,3 +109,12 @@ async def create_repeat_task(f, delay_ms, *args, **kwargs):
     while True:
         f(*args, **kwargs)
         await uasyncio.sleep_ms(delay_ms)
+
+
+def calc_pos_difference_with_wrap(start: int, end: int):
+    if end >= start:
+        return end-start
+    else:
+        delta = sys.maxsize-start
+        delta += end
+        return delta
