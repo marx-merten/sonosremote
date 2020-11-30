@@ -4,6 +4,8 @@ from epd import EPDDisplay
 from graphics import BufferedCanvas, FontCache
 from graphics.const import *
 from graphics.font import FontInfo, FontRegistry
+from statusleds import *
+from asyncWifiManager import WifiManager
 
 
 import utime
@@ -19,15 +21,21 @@ display: EBDDisplay = None
 canvas: BufferedCanvas = None
 font_cache: FontCache = None
 fonts: FontRegistry = None
+leds = None
 
 # Todo
 buttons = None
 sound = None
 encoder: Rotary = None
+wifi = None
 
 
 def init():
-    global display, canvas, font_cache, fonts, buttons, sound, encoder
+    global display, canvas, font_cache, fonts, buttons, sound, encoder, leds
+    leds = LEDController()
+    leds.fill(AREA_ALL, (0, 0, 0))
+    leds.fill(AREA_STATUS, (5, 3, 10))
+
     display = EPDDisplay(rotation=ROTATE_90)
     canvas = display.canvas
     fonts = FontRegistry()
@@ -57,3 +65,10 @@ def preload():
                     font_cache.store(glyph, rotation=ROTATE_90)
         canvas.fill_rect(0, canvas.height-20, (canvas.width/len(plFonts))*count, canvas.height, BLACK)
         display.update_screen(True)
+
+
+def init_wifi():
+    wifi = WifiManager()
+    wifi.start_network()
+
+# WifiManager.start_managing()

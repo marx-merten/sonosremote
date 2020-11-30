@@ -10,7 +10,11 @@ import gc
 from utils import clean_memory, create_repeat_task
 from fonts import fontello, fu, u8glib
 import uasyncio
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
+logging.getLogger("Base").debug("Logging enabled")
+logging.basicConfig(level=logging.WARNING)
 
 print("Initializing HAL")
 hal.init()
@@ -28,5 +32,9 @@ hal.fonts.register_font("meteo_large", fontello.fontello_meteo_meteo_24)
 hal.fonts.register_font("meteo_huge", fontello.fontello_meteo_meteo_32)
 hal.fonts.register_font("icon", fontello.fontello_icons_icon_12)
 hal.fonts.register_font("icon", fontello.fontello_icons_icon_24)
+
+print("Start wifi")
+hal.init_wifi()
+
 print("Initializing HAL...done")
 clean_memory(True)

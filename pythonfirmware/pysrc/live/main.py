@@ -1,5 +1,6 @@
 import hal
 from graphics.const import *
+from statusleds import ledcontroller, SceneMorph, SceneReplay
 import uasyncio
 from utils import clean_memory, create_repeat_task
 
@@ -20,5 +21,19 @@ def main():
     uasyncio.get_event_loop().run_forever()
 
 
+def loop():
+    uasyncio.get_event_loop().run_forever()
+
+
+fade = SceneMorph((0, 0, 0), steps=5, runtime_s=0.5)
+hal.leds.add_scene(ledcontroller.AREA_STATUS, fade)
+
+frames = [(500, [(20, 40, 10)]),
+          (200, [(50, 10, 0)])]
+sr = SceneReplay(frames)
+hal.leds.add_scene(ledcontroller.AREA_ENCODER, sr)
+
+
 # Start main loop
+# needs to be the last one in the row
 main()
