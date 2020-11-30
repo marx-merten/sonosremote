@@ -2,6 +2,9 @@ import time as utime
 import gc
 import uasyncio
 import sys
+import logging
+
+LOG = logging.getLogger("utils")
 
 
 def convertUint8ToInt8(v, size=8):
@@ -97,12 +100,12 @@ def dump_stats():
         print("{:20s} : {:8.2f}ms ({} calls) {:.2f} ms/call".format(k, t, c, t/c))
 
 
-def clean_memory(print_out=False):
+def clean_memory(console: logging.Logger = None):
     mem1 = gc.mem_free()
     gc.collect()
     mem2 = gc.mem_free()
-    if print_out:
-        print("--> Memory freed {:n} Bytes --> total Memory Free({:n}B {:.2f}kB)".format(mem2-mem1, mem2, mem2/1024))
+    if console:
+        console.debug("--> Memory freed {:n} Bytes --> total Memory Free({:n}B {:.2f}kB)".format(mem2-mem1, mem2, mem2/1024))
 
 
 async def create_repeat_task(f, delay_ms, *args, **kwargs):
