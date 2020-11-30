@@ -2,3 +2,4 @@ stubs
 *firmware.bin
 temp
 __pycache__
+.life_md5
