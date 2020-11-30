@@ -1,0 +1,14 @@
+{
+  "schema": 2,
+  "known_networks": [],
+  "access_point": {
+    "config": {
+      "essid": "SonosRemote",
+      "channel": 11,
+      "hidden": false,
+      "password": "sonos"
+    },
+    "enables_webrepl": false,
+    "start_policy": "fallback"
+  }
+}
