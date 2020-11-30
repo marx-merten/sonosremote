@@ -777,7 +777,7 @@ NoConn ~ 1350 3450
 Wire Wire Line
 	2400 1600 3800 1600
 $Comp
-L Codingfragments_common:OSS-logo LOGO1
+L GenericEPaperRemote-rescue:OSS-logo-Codingfragments_common LOGO1
 U 1 1 5FAE0DC1
 P 1150 7350
 F 0 "LOGO1" H 1428 7421 50  0000 L CNN

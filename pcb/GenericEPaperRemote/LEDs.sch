@@ -555,5 +555,22 @@ Wire Wire Line
 Connection ~ 5950 3400
 Wire Wire Line
 	5950 3400 5550 3400
-NoConn ~ 9350 2150
+$Comp
+L Connector:Conn_01x02_Male J6
+U 1 1 5FC563AD
+P 10100 2250
+F 0 "J6" H 10072 2132 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 10072 2223 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10100 2250 50  0001 C CNN
+F 3 "~" H 10100 2250 50  0001 C CNN
+	1    10100 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9350 2150 9900 2150
+Wire Wire Line
+	9050 2450 9900 2450
+Wire Wire Line
+	9900 2450 9900 2250
+Connection ~ 9050 2450
 $EndSCHEMATC
