@@ -3,3 +3,4 @@ stubs
 temp
 __pycache__
 .*_md5
+.DS_Store
