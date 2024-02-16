@@ -8,7 +8,7 @@ export ESPIDF=/Users/stefan/projekteHome/marxworld/electronics/environments/esp3
 export BOARD=GENERIC_SPIRAM
 export FLASH_SIZE=16MB
 export PORT=$(ls -1 /dev/tty.usbserial-*|head -n1)
-
+# export PORT=/dev/cu.SLAB_USBtoUART
 # export PORT=/dev/tty.usbserial-AD0KDXKW
 export PART_SRC=${curdir}/partitions-remote-py.csv
 export FROZEN_MANIFEST=${curdir}/frozenmanifest.py

@@ -20,7 +20,7 @@ LED_START_ALL = 0
 LED_END_ALL = 12
 
 
-LOG = logging.getLogger("LED Controller")
+LOG = logging.getLogger("LED")
 
 
 class LEDScene:
@@ -73,12 +73,14 @@ class LEDSceneIterator(LEDScene):
 
 
 class LEDSceneItem:
-    def __init__(self, region: int, start: int, end: int, init_frames: int, scene: LEDScene):
+    def __init__(self, region: int, start: int, end: int, init_frames: int, scene: LEDScene, restore_after_exec=False, cur_values=False):
         self.start = start
         self.end = end
         self.region = region
         self.init_frames = init_frames
         self.scene = scene
+        self.restore = restore_after_exec
+        self.values = cur_values
 
 
 class LEDController:
@@ -132,6 +134,14 @@ class LEDController:
         for ledNum in range(led_start, led_end+1):
             self.pixel[ledNum] = self._clean_color(value)
 
+    def _remove_scene(self, scene_id):
+        scene: LEDSceneItem = self.scenes.pop(scene_id)
+        if scene.restore:
+            self._write(scene.start, scene.end, scene.values)
+            return True
+        else:
+            return False
+
     def _tick_scenes(self):
         # TODO only execute first Scene for Area
         remove_ids = []
@@ -146,7 +156,8 @@ class LEDController:
             if scene.is_finished(deltaFrames):
                 remove_ids.append(index)
         for i in reversed(remove_ids):
-            self.scenes.pop(i)
+            if self._remove_scene(i):
+                dirty = True
         if dirty:
             self.pixel.write()
 
@@ -163,14 +174,16 @@ class LEDController:
             self._fill(start, stop, values)
         self.pixel.write()
 
-    def add_scene(self, region, scene: LEDScene):
+    def add_scene(self, region, scene: LEDScene, restore_after_execution=True):
         # TODO Only allow areas
         (start, stop) = self._get_region(region)
-        item = LEDSceneItem(region, start, stop, self.current_frame, scene)
+        initValues = self._get(start, stop)
+        item = LEDSceneItem(region, start, stop, self.current_frame, scene, restore_after_execution, initValues)
         item.scene.set_fps(self.fps)
-        item.scene.set_init_values(self._get(start, stop))
+        item.scene.set_init_values(initValues)
         self.scenes.insert(0, item)
         LOG.debug("Added Scene {} to region {} ({},{})".format(scene, region, start, stop))
+        return item
 
     async def tick(self):
         while True:

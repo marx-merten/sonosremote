@@ -5,7 +5,7 @@ LOG = logging.getLogger("Scene")
 
 
 class SceneReplay(LEDScene):
-    def __init__(self, frames: list, repeat=True):
+    def __init__(self, frames: list, repeat=-1):
         self.frames = frames
         self.current_frame_index = 0
         self.repeat = repeat
@@ -14,6 +14,9 @@ class SceneReplay(LEDScene):
 
     def _progress_frame(self):
         (self.current_frame_delay_ms, self.current_frame_data) = self.frames[self.current_frame_index % len(self.frames)]
+        if self.current_frame_index % len(self.frames) == 0:
+            if self.repeat > 0:
+                self.repeat -= 1
 
     def tick(self, deltaFrames: int, currentValues) -> list:
         LOG.debug("Display Frame {}".format(self.current_frame_data))
@@ -33,7 +36,7 @@ class SceneReplay(LEDScene):
         return delta_frames >= self._next_frame_framecount()
 
     def is_finished(self, delta_frames) -> boolean:
-        return (not self.repeat) and self.current_frame_index >= len(self.frames)
+        return self.repeat == 0
 
 
 class SceneMorph(LEDSceneIterator):

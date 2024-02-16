@@ -7,7 +7,7 @@ import logging
 
 # experiments
 # ###########
-from test.leds import *
+from test.lights import *
 
 LOG = logging.getLogger("MAIN")
 LOG.setLevel(logging.DEBUG)
@@ -21,6 +21,8 @@ hal.display.update_screen()
 hal.display.clear(WHITE)
 
 LOG.info("Startup Finished")
+fade = SceneMorph((0, 0, 0), steps=5, runtime_s=0.5)
+hal.leds.add_scene(ledcontroller.AREA_STATUS, fade, False)
 
 
 # setup async system
